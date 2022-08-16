@@ -19,6 +19,32 @@ package main
 
 import "fmt"
 
+func greet(name string) {
+	fmt.Println("Hello", name)
+}
+
+func displayMessage(message string) {
+	fmt.Println(message)
+}
+
+func addThreeNumbers(numOne, numTwo, numThree int) int {
+	return numOne + numTwo + numThree
+}
+
+func returnOne() int {
+	return 1
+}
+
+func returnOneAndTwo() (int, int) {
+	return 1, 2
+}
+
 func main() {
+	greet("Red")
+	displayMessage("Hello, I'm Red")
+
+	one, two := returnOneAndTwo()
+	four := addThreeNumbers(returnOne(), one, two)
+	fmt.Println("The value is", four)
 
 }
